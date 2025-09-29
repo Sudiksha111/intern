@@ -19,7 +19,9 @@ export default defineConfig(({ mode }) => {
     ].filter(Boolean),
     
     // ✅ Base path for both development and production
-    base: "/intern/",
+    // base: "/intern/",
+
+    base: isProduction ? '/' : '/',
         // base: process.env.VITE_BASE_PATH || (isProduction  ? '/intern/' : '/'),
 
 
