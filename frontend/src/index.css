@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cozy Notes App - Soft Pastel Design System */
+    --background: 35 20% 98%;
+    --foreground: 25 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 10% 15%;
+
+    /* Warm peach primary */
+    --primary: 25 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 90% 75%;
+
+    /* Soft sage secondary */
+    --secondary: 145 25% 85%;
+    --secondary-foreground: 25 10% 15%;
+
+    /* Gentle muted tones */
+    --muted: 35 15% 92%;
+    --muted-foreground: 25 8% 45%;
+
+    /* Lavender accent */
+    --accent: 280 30% 85%;
+    --accent-foreground: 25 10% 15%;
+
+    /* Soft coral destructive */
+    --destructive: 0 65% 70%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 20% 88%;
+    --input: 35 15% 92%;
+    --ring: 25 85% 65%;
+
+    /* Custom design tokens */
+    --gradient-warm: linear-gradient(135deg, hsl(25 85% 65%), hsl(35 80% 70%));
+    --gradient-cool: linear-gradient(135deg, hsl(145 25% 85%), hsl(165 20% 80%));
+    --gradient-subtle: linear-gradient(180deg, hsl(35 20% 98%), hsl(35 15% 95%));
+    
+    --shadow-soft: 0 4px 20px -4px hsl(25 20% 20% / 0.08);
+    --shadow-glow: 0 0 30px hsl(25 85% 65% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(25 15% 25% / 0.06);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
